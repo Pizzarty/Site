@@ -1,32 +1,32 @@
-<?php
-// ce fichier réalise deux connexions successives : au serveur de base de données, puis à la base de données
+ï»¿<?php
+// ce fichier rÃ©alise deux connexions successives : au serveur de base de donnÃ©es, puis Ã  la base de donnÃ©es
 
-// PARTIE A ADAPTER : définition des variables de connexion
-$serveur = "pizzarty.fr";		// adresse IP du serveur de données
-							// (localhost s'il est hébergé par la même machine que le serveur web)
-$utilisateur = "root";  	// nom de l'utilisateur se connectant à la base avec les droits adéquats
+// PARTIE A ADAPTER : dÃ©finition des variables de connexion
+$serveur = "pizzarty.fr";		// adresse IP du serveur de donnÃ©es
+							// (localhost s'il est hÃ©bergÃ© par la mÃªme machine que le serveur web)
+$utilisateur = "root";  	// nom de l'utilisateur se connectant Ã  la base avec les droits adÃ©quats
 $motdepasse = "pizzarty.frmysql72";  		// mot de passe de cet utilisateur
-$base = "User";  			// nom de la base de données
+$base = "User";  			// nom de la base de donnÃ©es
 
-// connexion au serveur de données désigné par la variable $serveur
-// la variable $cx_srv reçoit une valeur booléenne indiquant un succès (True) ou un échec (False) de la connexion
+// connexion au serveur de donnÃ©es dÃ©signÃ© par la variable $serveur
+// la variable $cx_srv reÃ§oit une valeur boolÃ©enne indiquant un succÃ¨s (True) ou un Ã©chec (False) de la connexion
 $cx_srv = mysql_connect($serveur, $utilisateur, $motdepasse);
 
-// test du succès de la connexion au serveur de données afin de passer ensuite à la connexion à la base de données
+// test du succÃ¨s de la connexion au serveur de donnÃ©es afin de passer ensuite Ã  la connexion Ã  la base de donnÃ©es
 if($cx_srv==False)
 	{  
-		print "Echec de la connexion au serveur ".$serveur." : problème d'adresse IP, d'utilisateur (login et/ou mot de passe) ou d'indisponibilité du serveur).<br />";
+		print "Echec de la connexion au serveur ".$serveur." : problÃ¨me d'adresse IP, d'utilisateur (login et/ou mot de passe) ou d'indisponibilitÃ© du serveur).<br />";
 	}
 else
 	{
-	    // connexion à la base de données désignée par la variable $base à partir de la connexion précédente ($cx-srv)
-		// la variable $cx_base reçoit une valeur booléenne indiquant un succès (True) ou un échec (False) de la connexion
+	    // connexion Ã  la base de donnÃ©es dÃ©signÃ©e par la variable $base Ã  partir de la connexion prÃ©cÃ©dente ($cx-srv)
+		// la variable $cx_base reÃ§oit une valeur boolÃ©enne indiquant un succÃ¨s (True) ou un Ã©chec (False) de la connexion
 	     $cx_base= mysql_select_db($base, $cx_srv);
 	    
-		// test du succès de la connexion à la base de données
+		// test du succÃ¨s de la connexion Ã  la base de donnÃ©es
 	    if($cx_base==False)
 			{  
-				print "Echec de la connexion à la base ".$base." : base inexistante/indisponible ou absence totale de droits de l'utilisateur sur cette base.<br />";
+				print "Echec de la connexion Ã  la base ".$base." : base inexistante/indisponible ou absence totale de droits de l'utilisateur sur cette base.<br />";
 	             // fermeture de la connexion au serveur
 	             mysql_close($cx_srv);
 			}
