@@ -13,7 +13,7 @@
 		
 		$sql2=mysql_query("SELECT nom, prenom, mail FROM UserConnexion");
 		$ligne2=mysql_fetch_array($sql2);
-		echo "<br/>Voici tous les utilisateurs"."<br/>";
+		echo "<br/>Voici tous les utilisateurs<br/>";
 		
 		while($ligne2 !=false) {
 			echo $ligne2['nom']." ".$ligne2['prenom']." ".$ligne2['mail']."<br/>";

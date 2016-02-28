@@ -1,0 +1,385 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body, html {
+	background-color: #F5F5F5;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	margin-bottom: 15px;
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+div.file {
+	position: relative;
+	display: inline-block;
+	width: 320px;
+	height: 210px;
+	padding: 5px;
+	margin: 4px;
+	border: 1px solid #ddd;
+}
+
+div.file img {
+	display: block;
+	max-width: 320px;
+	max-height: 180px;
+	padding-top: 8px;
+	border-radius: 2px;
+}
+
+div.file div.remove-button {
+	position: absolute;
+	bottom: 0;
+}
+
+div.file a.remove-button {
+	text-align: center;
+	width: 300px;
+}
+
+div#delete form input.validate-button {
+	display: inline-block;
+	margin: 5px 0;
+}
+
+div#delete form a {
+	display: block;
+}
+
+#user-menu {
+	position: fixed;
+	z-index: 9999999;
+	top: 40px;
+	right: 20px;
+	height: 270px;
+	width: 190px;
+	background-color: #F5F5F5;
+	border-radius: 0px;
+	padding: 5px;
+	box-shadow: 0 0 7px rgba(33,33,33,0.21);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#user-logo {
+	display: block;
+	margin: 5px auto;
+	height: 170px;
+	width: 170px;
+}
+
+.extended-user {
+	position: absolute;
+	display: block;
+	padding: 7px;
+}
+
+.user-box {
+	display: inline-block;
+	border-radius: 2px;
+	height: 200px;
+	width: 95%;
+	margin: 5px;
+	padding: 5px;
+}
+
+div#menu-top {
+	z-index: 9999998;
+	height: 25px;
+	width: 100%;
+	background-color: #ccc;
+	left: 0;
+	top: 0;
+	position: fixed;
+	padding: 12px 10px 10px 10px;
+}
+
+#title {
+	display: block;
+	height: 47px;
+	width: 210px;
+	background-color: #3c3f41;
+	margin-left: -10px;
+	margin-top: -12px;
+	position: fixed;
+}
+
+ul#menu-panel-list {
+	list-style: none;
+	display: block;
+}
+
+.user-menu-button {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 22px;
+	text-align: center;
+	background-color: #DBDBDB;
+	transition: background-color 0.2s linear;
+}
+
+.user-menu-button:hover {
+	background-color: #9B9B9B;
+}
+
+#logout {
+	bottom: 0;
+}
+
+#account {
+	bottom: 27px;
+}
+
+li.user a {
+	float: right;
+	margin-right: 60px;
+	text-align: center;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+	-ms-user-select: none;
+  	user-select: none;    
+}
+
+div#menu-panel {
+	background-color: #3c3f41;
+	height: 100%;
+	width: 210px;
+	left: 0;
+	top: 47px;
+	position: fixed;
+}
+
+ul#menu-panel-list {
+	overflow: hidden;
+	list-style: none;
+}
+
+div#error-logo {
+	background-image: url("/data/logo/warning.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	height: 40px;
+	width: 20px;
+	display: block;
+	float: left;
+	margin-right: 7px;
+}
+
+#contents {
+	display: inline-block;
+	position: static;
+	padding: 5px;
+	margin-left: 225px;
+	margin-top: 57px;
+}
+
+#protection {
+	background-color: rgba(55, 55, 55, 0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 999999998;
+	position: fixed;
+	display: block;
+}
+
+.window {
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	height: 530px;
+	width: 55%;
+	background-color: #F5F5F5;
+	z-index: 999999999;
+	border-radius: 2px;
+}
+
+.window .text-input {
+	margin: 5px 15%;
+	border: 1px solid #ddd;
+	width: 60%;
+	height: 25px;
+	background-color: #DBDBDB;
+}
+
+.window a {
+	margin: 20px 15%;
+}
+
+.window input.validate-button {
+	margin: 5px 15%;
+	width: 30%;
+	height: 25px;
+}
+
+.menu-panel-elem, .menu-panel-elem a, .menu-panel-elem-page, .menu-panel-elem-page a {
+	color: #F5F5F5;
+	display: block;
+	font-size: 15px;
+	padding: 7px 5px 7px 5px;
+}
+
+.menu-panel-elem:hover, .menu-panel-elem:hover a, .menu-panel-elem-page, .menu-panel-elem-page a {
+	background-color: #F5F5F5;
+	color: #3c3f41;
+}
+
+.menu-panel-elem:hover .menu-logo, .menu-panel-elem-page .menu-logo {
+	filter: invert(1);
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-o-filter: invert(1);
+	-ms-filter: invert(1);
+}
+
+.text-input {
+	border: 1px solid #ddd;
+	margin: 5px 0 10px 0;
+	background-color: #DBDBDB;
+}
+
+.validate-button {
+	width: 230px;
+	height: 20px;
+	background-color: #DBDBDB;
+	margin-top: 10px;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+	-ms-user-select: none;
+  	user-select: none;    
+}
+
+.add-button {
+	width: 170px;
+	height: 20px;
+	background-color: #00B233;
+	margin: 7px;
+	display: inline-block;
+	text-align: center;
+	padding: 2px;
+	color: #F5F5F5;
+	border-radius: 2px;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+	-ms-user-select: none;
+  	user-select: none;    
+}
+
+a.remove-button {
+	width: 170px;
+	height: 20px;
+	background-color: #B21212;
+	margin: 7px;
+	display: inline-block;
+	text-align: center;
+	padding: 2px;
+	color: #F5F5F5;
+	border-radius: 2px;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+	-ms-user-select: none;
+  	user-select: none;    
+}
+
+a.download-button {
+	width: 170px;
+	height: 20px;
+	background-color: #00B233;
+	margin-top: 10px;
+	display: block;
+	text-align: center;
+	padding: 2px;
+	color: #F5F5F5;
+	border-radius: 2px;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+	-ms-user-select: none;
+  	user-select: none;    
+}
+
+.plugin-name {
+	width: 380px;
+	display: block;
+}
+
+a, p, h1, h2, h3, td, dt, img {
+	font-family: 'Pontano Sans', sans-serif, arial;
+}
+
+a, dt {
+	text-decoration: none;
+	color: #333;
+	font-size: 17px;
+}
+
+div#home-logo {
+	background-image: url("/data/logo/home.png");
+}
+
+div#users-logo {
+	background-image: url("/data/logo/users.png");
+}
+
+div#screenshots-logo {
+	background-image: url("/data/logo/screenshots.png");
+}
+
+div#plugins-logo {
+	background-image: url("/data/logo/plugins.png");
+}
+
+div.menu-logo {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	height: 30px;
+	width: 15px;
+	display: block;
+	float: left;
+	margin-right: 7px;
+}
+
+a#error {
+	margin: 15px 0 25px 0;
+	display: block;
+	color: #B21212;
+	padding-top: 8px;
+}
+
+a#sucess {
+	margin: 15px 0 25px 0;
+	display: block;
+	color: #00B233;
+	padding-top: 9px;
+}
+
+@media (max-width: 1200px) {
+
+	
+}
